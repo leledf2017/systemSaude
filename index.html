@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>SystemSaúde - Login teste</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="#">
+                <img class="imageLogo" src="image/login/SystemSaude.png" alt="System Saúde | Clinícas Interligadas" title="System Saúde | Clínicas Interligadas">
+            </a>
+        </div> 
+        <div id="timeNow">
+            <script>
+                // Função para formatar 1 em 01
+                const zeroFill = n => {
+                    return ('0' + n).slice(-2);
+                }
+    
+                // Cria intervalo
+                const interval = setInterval(() => {
+                    // Pega o horário atual
+                    const now = new Date();
+    
+                    // Formata a data conforme dd/mm/aaaa hh:ii:ss
+                    const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+    
+                    // Exibe na tela usando a div#data-hora
+                    document.getElementById('timeNow').innerHTML = dataHora;
+                }, 1000);
+            </script>
+        </div>
+    </header>
+    <main>
+        <id id="boxLogin">
+            <div id="loginImage"><img src="image/login/user.png" alt="" width="64" height="64"><br><br></div>
+            
+            <form action="">
+                <label for="company">Selecione a Unidade de Saúde</label>
+                <select class="teste" name="company" id="company">
+                    <option value=""></option>
+                    <option value="Cliníca Rio de Janeiro">Cliníca Rio de Janeiro</option>
+                    <option value="Cliníca Rio Saúde Mais">Cliníca Rio Saúde Mais</option>
+                    <option value="Cliníca Dr. Alencar">Cliníca Dr. Alencar</option>
+                    <option value="Cliníca Central do Irajá">Cliníca Central do Irajá</option>
+                </select><br><br>
+                
+                <label for="idNumber">Número do Convênio</label>
+                <input type="number" id="idNumber" placeholder="Digite o Número do Convênio"><br><br>
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha"><br><br>
+               <a href="#">
+                <button type="button">Entrar</button>
+               </a>
+                <a class="greenLinks" href="#">Esqueceu sua senha?</a>
+            </form>
+        </id>
+    </main>
+    <aside>
+        <div id="panel">
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/support.png" alt="" title="Suporte por Telefone"></a>
+            </div>
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/communication.png" alt="" title="Suporte por Chat"></a>
+            </div>
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/add-user.png" alt="" title="Solicite seu Convênio"></a>
+            </div>
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/calendar.png" alt="" title="Agende suas Consultas"></a>
+            </div>
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/eye-examination.png" alt="" title="Meus Exames"></a>
+            </div>
+            <div class="iconsPanel">
+                <a href="#"><img src="image/login/invoice.png" alt="" title="Minhas Faturas"></a>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <div id="statusSystem"><h3>SystemSaúde - Version 1.0</h3></div>
+    </footer>
+</body>
+</html>
